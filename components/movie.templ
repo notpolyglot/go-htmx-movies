@@ -1,0 +1,25 @@
+package components
+
+import (
+    	"github.com/ryanbradynd05/go-tmdb"
+        "fmt"
+
+)
+
+templ MoviePage(movie *tmdb.Movie) {
+    @base() {
+        <img src={ fmt.Sprintf("https://image.tmdb.org/t/p/w500/%s", movie.BackdropPath)} />
+        <h1>{ movie.Title }</h1>
+        <div>
+            <span>{ movie.ReleaseDate }</span>
+            <div>
+                for _, genre := range movie.Genres {
+                    <span>{ genre.Name }</span>
+                }
+            </div>
+            <span>{ movie.Overview }</span>
+
+
+        </div>
+    }
+}

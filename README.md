@@ -1,0 +1,1 @@
+Read the article here: https://medium.com/@hhartleyjs/making-netflix-in-go-templ-and-htmx-1a7bd5f22524
